@@ -1,0 +1,31 @@
+page-fishtype {
+    .selected{background: lightgrey}
+    .tabs{height: 50px}
+    .label {
+        font-size: 22;
+        left: 10%;
+    }
+    .tabs {
+        font-size: 0;
+    }
+    .tab {
+        width: 33%;
+        height: 40px;
+        //padding: 0;
+        font-size: 1.4rem;
+        background: none;
+    }
+    .tab.active {
+        //background-color: #488aff;
+        border-bottom: 2px solid #488aff;
+        color:  #488aff
+    }
+    .add {
+        margin-left: 10%;
+        width: 25%;
+    }
+    .delete {
+        margin-right: 10%;
+        width: 25%;
+    }
+}

@@ -1,0 +1,86 @@
+<!--
+  Generated template for the IngreDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  
+  <ion-navbar>
+    <ion-title text-center>{{title}}</ion-title>
+    <ion-buttons start>
+      <button ion-button icon-only navPop>
+        <ion-icon name="back"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-label color="primary">饲料名称</ion-label>
+    <ion-input [readonly]="!isAddIngre" [(ngModel)]="ingre.feed_name" clearInput></ion-input>
+  </ion-item>
+  
+  <ion-item>
+      <ion-label color="primary"  text-left>成分名</ion-label>
+      <ion-label color="primary"  text-center>含量（%）</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary">干物质</ion-label>
+    <ion-input [readonly]="!isAddIngre" [(ngModel)]="ingre.dm" type="number"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label color="primary">粗蛋白</ion-label>
+    <ion-input [readonly]="!isAddIngre" [(ngModel)]="ingre.cp" type="number"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label color="primary">脂肪</ion-label>
+    <ion-input [readonly]="!isAddIngre" [(ngModel)]="ingre.lipid" type="number"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label color="primary">CHO</ion-label>
+    <ion-input [readonly]="!isAddIngre" [(ngModel)]="ingre.cho" type="number"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label color="primary">粗纤维</ion-label>
+    <ion-input [readonly]="!isAddIngre" [(ngModel)]="ingre.cf" type="number"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label color="primary">磷</ion-label>
+    <ion-input [readonly]="!isAddIngre" [(ngModel)]="ingre.pi" type="number"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label color="primary">灰分</ion-label>
+    <ion-input [readonly]="!isAddIngre" [(ngModel)]="ingre.ash" type="number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary">蛋白质消化率</ion-label>
+    <ion-input [readonly]="!isAddIngre" [(ngModel)]="ingre.digestible_protein" type="number"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label color="primary">磷消化率</ion-label>
+    <ion-input [readonly]="!isAddIngre" [(ngModel)]="ingre.digestible_ph" type="number"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label color="primary">溶失率</ion-label>
+    <ion-input [readonly]="!isAddIngre" [(ngModel)]="ingre.efw" type="number"></ion-input>
+  </ion-item>
+
+  <ion-buttons>
+    <button ion-button style="width: 100px" (click)="change()" float-left>修改</button>
+    <button ion-button style="width: 100px" (click)="commit()" float-right>确认</button>
+  </ion-buttons>
+
+</ion-content>

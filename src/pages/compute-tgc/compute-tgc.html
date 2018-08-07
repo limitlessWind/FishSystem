@@ -1,0 +1,79 @@
+<!--
+GeneratedtemplatefortheComputeTgcPagepage.
+
+Seehttp://ionicframework.com/docs/components/#navigationformoreinfoon
+Ionicpagesandnavigation.
+-->
+<ion-header>
+
+<ion-navbar>
+<ion-title>TGC计算</ion-title>
+  <ion-buttons start>
+    <button ion-button icon-only navPop>
+      <ion-icon name="back"></ion-icon></button>
+  </ion-buttons>
+</ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-label style="font-size:30px;" text-center>{{fish.short_name}}</ion-label>
+
+<div>
+  <ion-item>
+  <ion-label class="timelabel">时间间隔</ion-label>
+
+  <ion-select [(ngModel)]="interval" interface="popover">
+    <ion-option value="1" selected="true">天</ion-option>
+    <ion-option value="2">周</ion-option>
+    <ion-option value="3">半个月</ion-option>
+    <ion-option value="4">一个月</ion-option>
+  </ion-select>
+</ion-item>
+</div>
+
+  <div class="table">
+    <table class="tabletable-borderedtable-condensed">
+      <tbody>
+        <tr ion-list-header>
+          <th id="timeTH" class="success">时间</th>
+          <th id="averageT" class="success">平均温度(℃)</th>
+          <th id="getWeight" class="success">采样体重(克)</th>
+        </tr>
+        <tr *ngFor="let date of dateData; let i = index">
+          <td class="info">
+            <ion-input type="number" class="inputStyle" [(ngModel)]="dateData[i]"></ion-input>
+          </td>
+          <td class="info">
+            <ion-input type="number" class="inputStyle" [(ngModel)]="lowestTData[i]"></ion-input>
+          </td>
+          <td class="info">
+            <ion-input type="number" class="inputStyle" [(ngModel)]="weightData[i]"></ion-input>
+          </td>
+        </tr>
+        <!-- <tr>
+          <td class="info">
+            <ion-input type="number" class="inputStyle" value="2"></ion-input>
+          </td>
+          <td class="info">
+            <ion-input type="number" class="inputStyle" value="10.0"></ion-input>
+          </td>
+          <td class="info">
+            <ion-input type="number" class="inputStyle" value="0.6"></ion-input>
+          </td>
+        </tr> -->
+      </tbody>
+    </table>
+  </div>  
+
+  <div class="controlButton">
+    <button ion-button (click)='addRow()'>增加一行</button>
+    <button ion-button (click)='decRow()'>减少一行</button>
+    <button ion-button (click)='reset()'>清空历史</button>
+  </div>
+
+  <button class="computeButton" ion-button (click)='compute()'>计算</button>
+
+
+</ion-content>

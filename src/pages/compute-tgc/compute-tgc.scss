@@ -1,0 +1,23 @@
+page-compute-tgc {
+    .computeButton{
+        width: 150px;
+        left: 30%;
+        margin-top: 20px;
+    }
+     .table {
+        padding-left:16px;
+        margin-top: 20px;
+    } 
+    .controlButton {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    td{
+        border-bottom: 1px solid #32db64;
+        //text-align: center;
+    }
+    th {
+        text-align: start
+    }
+}

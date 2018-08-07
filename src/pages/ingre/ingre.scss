@@ -1,0 +1,26 @@
+page-ingre {
+    /* ion-item-sliding{
+        margin-bottom: 16px;
+    } */
+    /* ion-item-options{
+        margin-bottom: 16px;
+    } */
+    button .item-inner{
+        border: 0 !important;
+    }
+    .ingre {
+        width: 87%;
+        margin: 0 !important;
+    }
+    .delete {
+        float: right;
+        width: 13%;
+        margin: 0 !important; 
+    }
+    
+    
+}
+
+.delete .alert-message {
+    color: red;
+}

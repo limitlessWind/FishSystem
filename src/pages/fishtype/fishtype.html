@@ -1,0 +1,158 @@
+<!--
+  Generated template for the FishtypePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>鱼类管理</ion-title>
+    <!-- <ion-buttons end>
+      <button *ngIf="curTab!=3 && isManager" ion-button icon-only (click)="addFishOrStage()">
+        <ion-icon name="add-circle"></ion-icon></button>
+    </ion-buttons> -->
+  </ion-navbar>
+</ion-header>
+
+
+
+  
+
+<ion-content padding>
+  <!-- <ion-tabs tabsPlacement="top">
+        <ion-tab (ionSelect)="selectFishTab()" tabTitle="鱼类"></ion-tab>
+        <ion-tab (ionSelect)="selectStageTab()" tabTitle="对应阶段"></ion-tab>
+        <ion-tab (ionSelect)="selectInfoTab()" tabTitle="详细信息"></ion-tab>
+    </ion-tabs> -->
+  <div class="tabs">
+    <button class="tab" [ngClass]="{'active': curTab == 1}" (click)="selectFishTab()">鱼类</button>
+    <button class="tab" [ngClass]="{'active': curTab == 2}" (click)="selectStageTab()">对应阶段</button>
+    <button class="tab" [ngClass]="{'active': curTab == 3}" (click)="selectInfoTab()">详细信息</button>
+  </div>
+
+
+  <div class="fishlist" [hidden]="curTab!=1" *ngIf="fishes.length != 0">
+    <label class="label">当前已有鱼类</label>
+    <ion-list >
+      <ion-item-sliding *ngFor="let fish of fishes">
+        <button ion-item class="fishitem" (click)="chooseFish(fish)">
+          {{fish.short_name}}
+        </button>
+
+
+      </ion-item-sliding>
+    </ion-list>
+    <div [hidden]="!isManager">
+      <button class="add" ion-button (click)="addFish()" float-left>
+        添加
+      </button>
+      <button class="delete" ion-button (click)="removeFish()" float-right>
+        删除
+      </button>
+    </div>
+  </div>
+
+  <div class="stage" [hidden]="curTab!=2">
+    <label>该鱼类已有阶段</label>
+    <ion-list no-lines *ngFor="let stage of curFishStages">
+      <button ion-item class="stageitem" (click)="chooseStage(stage)">
+        {{stage.stg_name}}
+      </button>
+    </ion-list>
+    <div [hidden]="!isManager">
+      <button class="add" ion-button (click)="addStage()" float-left>
+        添加
+      </button>
+      <button class="delete" [style.background-color]="curStage==-1? 'darkgray' : '#488aff'" ion-button (click)="removeStage()" float-right>
+        删除
+      </button>
+    </div>
+  </div>
+
+  <div [hidden]="curTab!=3" *ngIf="fishes.length != 0">
+    <div class="info" [hidden]="curTab!=3" *ngIf="curStage!=-1">
+      <ion-item>
+        <ion-label>鱼类名称</ion-label>
+        <ion-input [readonly]="!isChangeInfo" [(ngModel)]="curFish.short_name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>阶段</ion-label>
+        <ion-input [readonly]="!isChangeInfo" [value]="curStage+1"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>阶段名称</ion-label>
+        <ion-input [readonly]="!isChangeInfo" [(ngModel)]="curstageObj.stg_name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>初始体重(克)</ion-label>
+        <ion-input [readonly]="!isChangeInfo" [(ngModel)]="curstageObj.start_wgt"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>终末体重(克)</ion-label>
+        <ion-input [readonly]="!isChangeInfo" [(ngModel)]="curstageObj.end_wgt"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>TGC</ion-label>
+        <ion-input [readonly]="!isChangeInfo" [(ngModel)]="curstageObj.stg_tgc"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>exp</ion-label>
+        <ion-input [readonly]="!isChangeInfo" [(ngModel)]="curstageObj.exp"></ion-input>
+      </ion-item>
+    </div>
+
+    <div class="fishInfo" [hidden]="curTab!=3 || curStage != -1" *ngIf="curFish">
+      <ion-item>
+        <ion-label>鱼类名称</ion-label>
+        <ion-input [readonly]="!isChangeInfo" [(ngModel)]="curFish.short_name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>详细名称</ion-label>
+        <ion-input [readonly]="!isChangeInfo" [(ngModel)]="curFish.detail_name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>最低生存温度</ion-label>
+        <ion-input [readonly]="!isChangeInfo" [(ngModel)]="curFish.min_temp"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>最低氮消耗率</ion-label>
+        <ion-input [readonly]="!isChangeInfo" [(ngModel)]="curFish.nitrogen_waste_a"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>最高氮消耗率</ion-label>
+        <ion-input [readonly]="!isChangeInfo" [(ngModel)]="curFish.nitrogen_waste_b"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>最低磷消耗率</ion-label>
+        <ion-input [readonly]="!isChangeInfo" [(ngModel)]="curFish.p_waste_a"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>最高氮消耗率</ion-label>
+        <ion-input [readonly]="!isChangeInfo" [(ngModel)]="curFish.p_waste_a"></ion-input>
+      </ion-item>
+    </div>
+
+    <div [hidden]="!isManager">
+      <button class="add" ion-button (click)="change()" float-left>
+        修改
+      </button>
+      <button class="delete" ion-button (click)="commit()" float-right>
+        确认
+      </button>
+    </div>
+  </div>
+
+</ion-content>
