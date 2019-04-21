@@ -1,0 +1,106 @@
+$font-path:'../assets/fonts';
+@font-face {
+  font-family: 'ionfish';
+  src:  url('#{$font-path}/ionfish.eot?25khw1');
+  src:  url('#{$font-path}/ionfish.eot?25khw1#iefix') format('embedded-opentype'),
+    url('#{$font-path}/ionfish.ttf?25khw1') format('truetype'),
+    url('#{$font-path}/ionfish.woff?25khw1') format('woff'),
+    url('#{$font-path}/ionfish.svg?25khw1#ionfish') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon{
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'ionfish' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.ion-ios-fish:before { 
+  content: "\e900";
+  // color: #1296db;
+}
+.ion.ion-ios-fish-outline:before { 
+  content: "\e900";
+  // color: #1296db;
+}
+.ion-ios-fish-outline:before { 
+  content: "\e900";
+  // color: #1296db;
+}
+.ion.ion-ios-fish:before { 
+  content: "\e900";
+  // color: #1296db;
+}
+
+
+.ion-uniE900 .path1:before {
+  content: "\e900";
+  color: rgb(255, 207, 101);
+}
+.ion-uniE900 .path2:before {
+  content: "\e901";
+  margin-left: -1em;
+  color: rgb(255, 180, 80);
+}
+.ion-uniE900 .path3:before {
+  content: "\e902";
+  margin-left: -1em;
+  color: rgb(255, 75, 75);
+}
+.ion-uniE900 .path4:before {
+  content: "\e903";
+  margin-left: -1em;
+  color: rgb(255, 207, 101);
+}
+.ion-uniE900 .path5:before {
+  content: "\e904";
+  margin-left: -1em;
+  color: rgb(255, 207, 101);
+}
+.ion-uniE900 .path6:before {
+  content: "\e905";
+  margin-left: -1em;
+  color: rgb(255, 207, 101);
+}
+.ion-uniE900 .path7:before {
+  content: "\e906";
+  margin-left: -1em;
+  color: rgb(255, 207, 101);
+}
+.ion-uniE900 .path8:before {
+  content: "\e907";
+  margin-left: -1em;
+  color: rgb(255, 180, 80);
+}
+.ion-uniE900 .path9:before {
+  content: "\e908";
+  margin-left: -1em;
+  color: rgb(255, 75, 75);
+}
+.ion-uniE900 .path10:before {
+  content: "\e909";
+  margin-left: -1em;
+  color: rgb(255, 207, 101);
+}
+.ion-uniE900 .path11:before {
+  content: "\e90a";
+  margin-left: -1em;
+  color: rgb(255, 207, 101);
+}
+.ion-uniE900 .path12:before {
+  content: "\e90b";
+  margin-left: -1em;
+  color: rgb(255, 207, 101);
+}
+
