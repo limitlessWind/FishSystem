@@ -124,6 +124,16 @@ export class IngrePage {
   }
 
   viewIngreDetail(ingre): void {
+    if (!this.httpProvider.uid) {
+      //alert('请先登陆');
+      this.toast.create({
+        message: '请先登陆',
+        duration: 1000,
+        position: 'middle'
+      }).present();
+      this.navCtrl.parent.select(4);
+      return;
+    }
     this.navCtrl.push('IngreDetailPage', {
       ingre: ingre
     });
