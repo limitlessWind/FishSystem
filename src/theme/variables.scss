@@ -116,37 +116,37 @@ button {
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
-.tab-button[aria-selected=false] .ion-ios-ingre{ 
+.tab-button[aria-selected=false] .ion-ios-ingre-outline, .ion-ios-ingre{ 
   content: url("../assets/imgs/feeds1.png"); 
   width: 24px;
   min-width: 24px !important;  
   height: 24px;
 }
-.tab-button[aria-selected=true] .ion-ios-ingre{ 
+.tab-button[aria-selected=true] .ion-ios-ingre-outline, .ion-ios-ingre{ 
   content: url("../assets/imgs/feeds1.png"); 
   width: 24px;
   min-width: 24px !important;  
   height: 24px;
 }
-.tab-button[aria-selected=false] .ion-ios-predict{ 
+.tab-button[aria-selected=false] .ion-ios-predict-outline, .ion-ios-predict{ 
   content: url("../assets/imgs/predict.png"); 
   width: 24px;
   min-width: 24px !important;  
   height: 24px;
 }
-.tab-button[aria-selected=true] .ion-ios-predict{ 
+.tab-button[aria-selected=true] .ion-ios-predict-outline, .ion-ios-predict{ 
   content: url("../assets/imgs/predict.png"); 
   width: 24px;
   min-width: 24px !important;  
   height: 24px;
 }
-.tab-button[aria-selected=false] .ion-ios-user{ 
+.tab-button[aria-selected=false] .ion-ios-user-outline, .ion-ios-user{ 
   content: url("../assets/imgs/user.png"); 
   width: 24px;
   min-width: 24px !important;  
   height: 24px;
 }
-.tab-button[aria-selected=true] .ion-ios-user{ 
+.tab-button[aria-selected=true] .ion-ios-user-outline, .ion-ios-user{ 
   content: url("../assets/imgs/user.png"); 
   width: 24px;
   min-width: 24px !important;  
@@ -154,26 +154,26 @@ button {
 }
 
 
-.tab-button[aria-selected=false] .ion-ios-tgc{ 
+.tab-button[aria-selected=false] .ion-ios-tgc-outline, .ion-ios-tgc{ 
   content: url("../assets/imgs/tgc.png"); 
   width: 24px;
   min-width: 24px !important;  
   height: 24px;
 }
-.tab-button[aria-selected=true] .ion-ios-tgc{ 
+.tab-button[aria-selected=true] .ion-ios-tgc-outline, .ion-ios-tgc{ 
   content: url("../assets/imgs/tgc.png"); 
   width: 24px;
   min-width: 24px !important;  
   height: 24px;
 }
 
-.tab-button[aria-selected=true] .ion-ios-fishtype{ 
+.tab-button[aria-selected=true] .ion-ios-fishtype-outline, .ion-ios-fishtype{ 
   content: url("../assets/imgs/fishtype.png");
   width: 24px;
   min-width: 24px !important;  
   height: 24px;
 }
-.tab-button[aria-selected=false] .ion-ios-fishtype{ 
+.tab-button[aria-selected=false] .ion-ios-fishtype-outline, .ion-ios-fishtype{ 
   content: url("../assets/imgs/fishtype.png");
   width: 24px;
   min-width: 24px !important;  
